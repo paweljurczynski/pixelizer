@@ -1,3 +1,7 @@
 import './app.scss';
+import 'fullpage.js';
+import $ from 'jquery';
 
-console.log('Hello from app.js!');
+$(() => {
+	$('#fullpage').fullpage();
+});
