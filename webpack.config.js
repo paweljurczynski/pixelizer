@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -8,7 +9,7 @@ const cssDev = ['style-loader', 'css-loader', 'sass-loader'];
 const cssProd = ExtractTextWebpackPlugin.extract(['css-loader', 'sass-loader']);
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.js',
@@ -16,16 +17,20 @@ module.exports = {
     module: {
         rules: [
             { test: /\.scss$/, use: isProd ? cssProd : cssDev },
-            { test: /\.js$/, exclude: '/node_modules/', use: 'babel-loader' }
+            { test: /\.js$/, exclude: '/node_modules/', use: 'babel-loader' },
+            { test: /\.json$/, use: 'json-loader' }
         ]
     },
     devServer: {
         port: 3000,
         stats: 'errors-only',
-        open: true,
         hot: true
     },
     plugins: [
+        new CopyWebpackPlugin([{
+            from: './src/images',
+            to: 'images'
+        }]),
         new HtmlWebpackPlugin({
             title: 'Custom template',
             template: './src/index.html',

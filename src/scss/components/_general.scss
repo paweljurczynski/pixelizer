@@ -1,6 +1,3 @@
-@import '../node_modules/normalize-scss/sass/normalize';
-@import '../node_modules/fullpage.js/dist/jquery.fullpage.css';
-
 body{
     background: #ddd;
     display: flex;
@@ -16,4 +13,12 @@ body{
        font-weight: 100;
        color: #444;
     }
+}
+
+#fullpage{
+    width: 100%;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
 }

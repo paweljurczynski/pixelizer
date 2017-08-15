@@ -1,0 +1,16 @@
+// External resources
+@import '../../node_modules/normalize-scss/sass/normalize';
+@import '../../node_modules/fullpage.js/dist/jquery.fullpage.css';
+
+// Particles
+@import './vendors/component.css';
+@import './vendors/demo.css';
+
+// Variables
+@import 'variables';
+
+@import './components/navigation';
+@import './components/general';
+@import './components/view';
+@import './components/canvas';
+@import './components/home';
