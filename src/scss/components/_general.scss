@@ -27,7 +27,12 @@ body{
     transition: .3s;
     color: $themme-light-font;
     
-    &:hover, &:active, &:focus{
+    &:active, &:focus{
+        color: $themme-light-font;
+        
+    }
+
+    &:hovera{
         color: $theme-main-color;
     }
 }

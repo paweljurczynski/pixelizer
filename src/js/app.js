@@ -12,7 +12,7 @@ $(() => {
 	navigation = $('.navigation--right');
 
 	$('#fullpage').fullpage({
-		anchors: ['Home','WhoWeAre', 'Projects', 'OurClients', 'Contact'],
+		anchors: ['Home','WhoWeAre', 'WhatWeDo', 'Projects', 'OurClients', 'Contact'],
 		afterLoad
 	});
 });
