@@ -6,8 +6,17 @@ import 'fullpage.js';
 
 import $ from 'jquery';
 
+let navigation = null;
+
 $(() => {
+	navigation = $('.navigation--right');
+
 	$('#fullpage').fullpage({
-		anchors: ['Home','WhoWeAre', 'Projects', 'OurClients', 'Contact']
+		anchors: ['Home','WhoWeAre', 'Projects', 'OurClients', 'Contact'],
+		afterLoad
 	});
 });
+
+function afterLoad(anchor) {
+	navigation.attr('class', `navigation navigation--right ${anchor}`);
+}

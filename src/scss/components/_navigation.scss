@@ -4,24 +4,39 @@
 
     &__link{
         display: block;
-        padding: 25px 15px;
+        padding: 30px 15px;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     &--left{
-        left: $view-border-width + 10px;
+        left: $view-border-width + 15px;
+
+        a{
+            font-weight: 100;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
     }
 
     &--right{
-        right: $view-border-width + 10px;
+        right: $view-border-width + 20px;
+
+        // &.Home [href$=Home],
+        &.WhoWeAre [href$=WhoWeAre],
+        &.Projects [href$=Projects],
+        &.OurClients [href$=OurClients],
+        &.Contact [href$=Contact] {
+            color: $theme-main-color;
+        }
     }
 
     &__list{
-        padding: 0 15px 0 0;
+        padding: 0 25px 0 0;
     }
 
     &__logo{
-        height: 15px;
+        height: 18px;
         margin-right: 10px;
 
         &-link{
