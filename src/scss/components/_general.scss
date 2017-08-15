@@ -38,3 +38,15 @@ body{
     margin: 0;
     display: flex;    
 }
+
+h1{
+    margin: 0;
+    font-weight: normal; 
+}
+
+.header{
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: $theme-main-color;
+}

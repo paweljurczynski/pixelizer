@@ -9,11 +9,11 @@
     }
 
     &--left{
-        left: $view-border-width;
+        left: $view-border-width + 10px;
     }
 
     &--right{
-        right: $view-border-width;
+        right: $view-border-width + 10px;
     }
 
     &__list{
