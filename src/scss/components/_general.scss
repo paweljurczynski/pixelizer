@@ -1,3 +1,6 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
 body{
     background: #ddd;
     display: flex;
@@ -6,7 +9,8 @@ body{
     height: 100vh;
     padding: 0;
     margin: 0;
-
+    font-family: 'Lato', sans-serif;
+    
     p {
        font-family: Arial, sans-serif;
        font-size: 24px;
@@ -19,6 +23,18 @@ body{
     width: 100%;
 }
 
-*, *:before, *:after{
-    box-sizing: border-box;
+.link{
+    transition: .3s;
+    color: $themme-light-font;
+    
+    &:hover, &:active, &:focus{
+        color: $theme-main-color;
+    }
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;    
 }

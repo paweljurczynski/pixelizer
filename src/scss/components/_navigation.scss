@@ -1,24 +1,33 @@
 .navigation{
     position: fixed;
     top: $view-border-width;
-    right: $view-border-width;
-
-    &__list{
-        list-style: none;
-        padding: 0 15px 0 0;
-        margin: 0;
-        display: flex;
-    }
 
     &__link{
         display: block;
         padding: 25px 15px;
-        transition: .3s;
-        color: $themme-light-font;
         text-transform: uppercase;
+    }
 
-        &:hover, &:active, &:focus{
-            color: $theme-main-color;
+    &--left{
+        left: $view-border-width;
+    }
+
+    &--right{
+        right: $view-border-width;
+    }
+
+    &__list{
+        padding: 0 15px 0 0;
+    }
+
+    &__logo{
+        height: 15px;
+        margin-right: 10px;
+
+        &-link{
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
         }
     }
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <title>Webpack static starter</title>
 </head>
 
@@ -12,22 +14,37 @@
     <div id="fullpage">
         <div class="section view" id="large-header">
             <canvas id="canvas"></canvas>
-            <div class="view__content home__header">
-
-            </div>
+            <div class="view__content home__header"></div>
         </div>
-        <div class="section view">Some section</div>
-        <div class="section view">Some section</div>
-        <div class="section view">Some section</div>
+        <div class="section view">Kim jesteśmy?</div>
+        <div class="section view">Projekty</div>
+        <div class="section view">Nasi klienci</div>
+        <div class="section view">Kontakt</div>
     </div>
-    <nav class="navigation">
-        <ul class="navigation__list">
-            <li><a href="#WhoWeAre" class="navigation__link">Kim jesteśmy</a></li>
-            <li><a href="#Projects" class="navigation__link">Projekty</a></li>
-            <li><a href="#OurClients" class="navigation__link">Nasi klienci</a></li>
-            <li><a href="#Contact" class="navigation__link">Kontakt</a></li>
+    <div class="navigation  navigation--left">
+        <ul class="list navigation__list">
+            <li>
+                <a href="#Home" class="link navigation__link navigation__logo-link">
+                    <img src="/images/logo.png" alt="logo" class="navigation__logo">
+                    <span>pixelizer</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <nav class="navigation navigation--right">
+        <ul class="list navigation__list">
+            <li><a href="#Home" class="link navigation__link">Home</a></li>
+            <li><a href="#WhoWeAre" class="link navigation__link">Kim jesteśmy</a></li>
+            <li><a href="#Projects" class="link navigation__link">Projekty</a></li>
+            <li><a href="#OurClients" class="link navigation__link">Nasi klienci</a></li>
+            <li><a href="#Contact" class="link navigation__link">Kontakt</a></li>
         </ul>
     </nav>
+    <ul class="list social__list">
+        <li><a href="" class="link social__link fa fa-facebook"></a></li>
+        <li><a href="" class="link social__link fa fa-twitter"></a></li>
+        <li><a href="" class="link social__link fa fa-instagram"></a></li>
+    </ul>
 </body>
 
 </html>

@@ -7,9 +7,7 @@ import 'fullpage.js';
 import $ from 'jquery';
 
 $(() => {
-	// particlesJS('particles-js', particlesConfig);
-
 	$('#fullpage').fullpage({
-		anchors: ['WhoWeAre', 'Projects', 'OurClients', 'Contact']
+		anchors: ['Home','WhoWeAre', 'Projects', 'OurClients', 'Contact']
 	});
 });
