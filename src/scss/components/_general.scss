@@ -29,10 +29,9 @@ body{
     
     &:active, &:focus{
         color: $themme-light-font;
-        
     }
 
-    &:hovera{
+    &:hover{
         color: $theme-main-color;
     }
 }
