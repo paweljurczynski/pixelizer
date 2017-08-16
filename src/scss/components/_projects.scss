@@ -7,11 +7,10 @@
 }
 
 .project{
-    width: 70vw;
+    width: 65vw;
     height: 400px;
-    margin-left: 100px;
+    margin-left: 10vw;
     position: relative;
-    // background: rgba(black, 0.7);
     background: url('/images/about.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
@@ -31,22 +30,33 @@
     &__content{
         flex-grow: 1;
         display: flex;
-        // flex-direction: column;
-        // align-items: flex-start;
         justify-content: space-between;
-        padding: 40px 40px 40px 130px;
+        padding: 30px 30px 40px 130px;
     }
 
     &__column{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // justify-content: space-between;
     }
     
     &__right{
         width: 200px;
         background: $theme-main-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 20px 20px 30px;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            background: lighten($theme-main-color, 10%);
+
+            .project__next__arrow{
+                animation: moving-arrow 1s infinite;
+            }
+        }
     }
 
     &__name{
@@ -67,7 +77,7 @@
     }
 
     &__date{
-
+        color:$themme-light-font;
     }
 
     &__number{
@@ -75,9 +85,17 @@
         align-items: flex-start;
         margin-bottom: 25px;
 
+        &--current,
+        &--next{
+            font-size: 40px;            
+        }
+
         &--current{
             color: darken($themme-light-font, 20%);
-            font-size: 36px;
+        }
+
+        &--next{
+            font-weight: bold;
         }
         
         &--left{
@@ -86,5 +104,29 @@
             font-size: 16px;
             margin-left: 5px;
         }
+    }
+
+    &__next{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__name{
+            text-align: left;
+        }
+
+        &__arrow{
+            font-size: 60px;        
+            transition: .3s;    
+        }
+    }
+}
+
+@keyframes moving-arrow{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(3px);
     }
 }
